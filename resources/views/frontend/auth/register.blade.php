@@ -40,6 +40,20 @@
                             </div><!--col-->
                         </div><!--row-->
 
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                {{ html()->label(__('Nickname'))->for('nickname') }}
+
+                                {{ html()->text('nickname')
+                                    ->class('form-control')
+                                    ->placeholder(__('Nickname'))
+                                    ->attribute('maxlength', 191)
+                                     ->required()}}
+                            </div><!--form-group-->
+                        </div><!--col-->
+                    </div><!--row-->
+
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">

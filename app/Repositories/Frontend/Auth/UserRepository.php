@@ -94,6 +94,7 @@ class UserRepository extends BaseRepository
             $user = parent::create([
                 'first_name' => $data['first_name'],
                 'last_name' => $data['last_name'],
+                'nickname' => $data['nickname'],
                 'email' => $data['email'],
                 'confirmation_code' => md5(uniqid(mt_rand(), true)),
                 'active' => true,
@@ -137,6 +138,7 @@ class UserRepository extends BaseRepository
         $user = $this->getById($id);
         $user->first_name = $input['first_name'];
         $user->last_name = $input['last_name'];
+        $user->nickname = $input['nickname'];
         $user->avatar_type = $input['avatar_type'];
 
         // Upload profile image if necessary

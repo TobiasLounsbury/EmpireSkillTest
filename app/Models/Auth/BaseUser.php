@@ -31,6 +31,7 @@ class BaseUser extends Authenticatable implements AuditableInterface
     protected $fillable = [
         'first_name',
         'last_name',
+        'nickname',
         'email',
         'avatar_type',
         'avatar_location',

@@ -15,7 +15,7 @@ class AddNicknameFieldToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //
-          $table->string('nickname');
+          $table->string('nickname')->nullable()->default("")->after('last_name');
         });
     }
 

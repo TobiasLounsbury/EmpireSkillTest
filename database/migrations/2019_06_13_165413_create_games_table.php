@@ -18,8 +18,8 @@ class CreateGamesTable extends Migration
             $table->timestamps();
             $table->unsignedBigInteger('player_x_id');
             $table->unsignedBigInteger('player_o_id');
-            $table->string('result', 1); // [x,o,d]
-            $table->integer('mode');
+            $table->string('winner', 1)->nullable(); // [x,o,d]
+            $table->tinyInteger('strike')->default(0);
         });
     }
 

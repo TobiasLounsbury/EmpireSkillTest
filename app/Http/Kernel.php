@@ -43,8 +43,22 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\ToBeLoggedOut::class,
         ],
 
+        'custom-api' => [
+            \App\Http\Middleware\EncryptCookies::class,
+            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+            \Illuminate\Session\Middleware\StartSession::class,
+            \Illuminate\Session\Middleware\AuthenticateSession::class, // Must be enabled for 'single login' to work
+            \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+            \App\Http\Middleware\LocaleMiddleware::class,
+            \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \App\Http\Middleware\ToBeLoggedOut::class,
+            //Turning this off, because this is a demo and using an interval triggers this
+            //'throttle:60,1',
+            'bindings',
+        ],
         'api' => [
-            'throttle:60,1',
+            //Turning this off, because this is a demo and using an interval triggers this
+            //'throttle:60,1',
             'bindings',
         ],
 

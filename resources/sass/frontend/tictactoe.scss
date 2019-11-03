@@ -1,0 +1,70 @@
+
+.ttt- {
+    &playing.active .ttt-view {
+            cursor: pointer;
+    }
+    &view line {
+        cursor: default;
+    }
+    &play {
+        font: bold italic 90px sans-serif;
+        dominant-baseline: middle;
+        text-anchor: middle;
+        stroke: black;
+        stroke-width: 2;
+        fill: lightcyan;
+        cursor: default;
+        user-select: none;
+    }
+
+    &game-hash {
+        stroke-width: 5;
+        stroke-linecap: round;
+        stroke: #000;
+
+    }
+
+    &win-strike {
+        stroke-width: 5;
+        stroke-linecap: round;
+        stroke: teal;
+
+    }
+
+    &draw {
+        font: bold italic 90px sans-serif;
+        dominant-baseline: middle;
+        text-anchor: middle;
+        stroke: black;
+        stroke-width: 2;
+        fill: darkred;
+        stroke-linecap: round;
+    }
+
+    &current-player {
+        float: right;
+    }
+    &sortable {
+        cursor: pointer;
+        user-select: none;
+    }
+
+    &sortable i.fas {
+        visibility: hidden;
+    }
+
+    &sortable.active i.fas {
+        visibility: visible;
+    }
+}
+
+.list-players {
+    text-align: center;
+}
+
+.player-x {
+    float: left;
+}
+.player-o {
+    float: right;
+}

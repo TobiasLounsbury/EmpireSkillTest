@@ -7,6 +7,11 @@
 
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
+
+            <li class="nav-item"><a href="/#/games/" class="nav-link ">Games</a></li>
+            <li class="nav-item"><a href="/#/start-a-game/" class="nav-link ">Play a Game</a></li>
+            <li class="nav-item"><a href="/#/leaderboard/" class="nav-link ">Leaderboard</a></li>
+
             @if(config('locale.status') && count(config('locale.languages')) > 1)
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownLanguageLink" data-toggle="dropdown"
